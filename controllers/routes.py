@@ -10,3 +10,7 @@ class Routes(object):
         @app.route('/')
         def index():
             return render_template('index.html')
+
+        @app.route('/latest-result')
+        def latest_result():
+            return render_template('tableau.html')
