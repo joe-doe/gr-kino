@@ -17,4 +17,4 @@
 
                                         });
                                         },
-                                         5000); // refresh page every 3 seconds
+                                         60000*5); // refresh page every 60*5 seconds
