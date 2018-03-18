@@ -1,4 +1,20 @@
  var autoLoad = setInterval( function () {
                                         $('#latest-result').load('latest-result').fadeIn("slow");
+                                         $.getJSON( "/last-draw", function( d ) {
+                                            console.log(d);
+                                            var draw_no = d.drawNo;
+                                            var draw_time = d.drawTime;
+                                            var draw_results = d.results;
+                                            var arrayLength = draw_results.length;
+                                            var draw_bonus = draw_results[arrayLength-1]
+
+                                            for (var i = 0; i < arrayLength; i++) {
+                                                $("#"+draw_results[i]).removeClass();
+                                                $("#"+draw_results[i]).addClass("selected");
+                                            }
+                                            $("#"+draw_bonus).removeClass();
+                                            $("#"+draw_bonus).addClass("bonus");
+
+                                        });
                                         },
-                                         10000); // refresh page every 10 seconds
+                                         5000); // refresh page every 3 seconds
