@@ -5,22 +5,26 @@
 	padding: 20px;
 	background: #111;
 	color: #e66f69;
+    border-radius: 30%;
 }
 
 .selected {
     color: black;
     background: orange;
     align: center;
+    border-radius: 30%;
 }
 
 .not-selected {
     color: white;
     background: black;
     align: center;
+    border-radius: 30%;
 }
 
 .bonus {
     color: white;
     background: red;
     align: center;
+    border-radius: 30%;
 }
