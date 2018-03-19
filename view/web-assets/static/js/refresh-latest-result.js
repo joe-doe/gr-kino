@@ -14,6 +14,7 @@ var updater = function () {
                               $("#"+draw_bonus).removeClass();
                               $("#"+draw_bonus).addClass("bonus");
 
+                              $("#draw-details").html("Αριθμός κλήρωσης: <b>"+draw_no+"</b><br>Ώρα κλήρωσης: <b>"+draw_time+"</b>");
                            });
                            };
 updater();
